@@ -1,0 +1,23 @@
+body {
+    background-color: #C3D4E9;
+    color: #303A67;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+img {
+    max-height: 300px;
+}
+
+h1 {
+    text-decoration: underline;
+    background-color:yellow;
+ }
+
+ h2 {
+    background-color:yellow;
+ }

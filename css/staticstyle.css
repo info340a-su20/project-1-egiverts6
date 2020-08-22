@@ -1,0 +1,303 @@
+body {
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+  }
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+
+.logo  {
+      width: 150px;
+      height: 150px;
+      margin-left: 3px;
+  }
+
+
+
+button {
+    background-color: #3b6978;
+    color: white;
+}
+
+.container2 button {
+    width: 100px;
+    height: 30px;
+
+}
+
+button:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  .card-title {
+    font-size: 40px;
+    margin-top: 50px;
+  }
+  
+
+  .container {
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .buttons {
+    display: flex;
+  }
+  
+  .buttons button{
+    font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+    display: flex;
+    flex-grow: 1;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    box-shadow: .5px 1px;
+    margin-right: .5em;
+    margin-left: .5em;
+    margin-top: .5em;
+
+  }
+  
+  .column1 {
+    flex-basis: 250px;
+    padding: 1em;
+  }
+  
+  .column2 {
+    flex: 1;
+    flex-basis: 0px;
+    flex-grow: auto;
+    background-color: #eee;
+    padding: 1em;
+  }
+
+  .identify {
+    display: none;
+    }
+
+  
+  .column3 {
+    flex-basis: 180px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 1em;
+  }
+
+  .column3 .resources {
+      background-color: #84a9ac;
+  }
+
+  .column3 .resources button {
+    font-size: 15px;
+    padding: .5rem;
+    margin: .25rem;
+    background-color: #303030;
+  }
+
+  .column3 .feedback {
+    background-color: #E8E8E8;
+  }
+  
+  .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background-color: white;
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    flex: 0 0 250px;
+  }
+
+  .container2 .card:hover { 
+    transform: scale(1.1); 
+    }
+  
+  .card p {
+    padding: .5rem 1rem;
+  }
+  
+  .card img {
+    height: 200px;
+    width: 210px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  
+  html {
+    height: 100%;
+  }
+  
+  main {
+    flex: 1;
+  }
+
+
+.column3 {
+    display: none;
+}
+
+.footer {
+    background-color:#26272b;
+    padding:45px 0 20px;
+    font-size:15px;
+    line-height:24px;
+    color:#737373;
+    padding-bottom: 200px;
+}
+
+.footer h6 {
+    margin-top: 30rem;
+    color:#fff;
+    font-size:14px;
+    margin-top:5px;
+    margin-left: 5rem;
+}
+
+.links li {
+    display:block;
+    font-size: 12px;
+
+}
+
+.links{
+  padding-left: 5rem;
+  list-style:none;
+}
+
+.links a {
+    color: #737373;
+}
+
+hr {
+    margin-right: 1em;
+    margin-left: 1em;
+}
+
+.col-legend {
+    font-size: 17px;
+}
+
+.splsh-card-body .card-title {
+    font-size: 32px;
+}
+
+.splsh-card-body p {
+    font-size: 12px;
+}
+
+.cont {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.main-container {
+    display: flex;
+    flex-basis: auto;
+    justify-content: flex-start;
+    margin: 5rem;
+}
+
+.main-container .card1 {
+    background-color: rgba(245, 245, 245, 1);
+    opacity: .65;
+}
+
+.main-container button {
+    margin-top: 1rem;
+}
+
+.jumbotron1 {
+    margin-bottom: 3rem;
+}
+
+.container h5 {
+  font-size: 18px;
+}
+
+.form-group .col-legend {
+  font-size: 15px;
+  margin-left: 0.5rem;
+}
+
+.form-group .col .form-check-label {
+  margin-left: 3rem;
+}
+
+.col-auto option {
+  font-size: 5px;
+  margin: 3rem;
+}
+
+.modal-body {
+  display: inline-block;
+}
+
+
+@media (min-width: 768px){
+    .column3 {
+        display: inline-block;
+    }
+
+    .column2 {
+        background-color: #A0A0A0;
+    }
+
+    .buttons button {
+        font-size: 20px;
+        padding: .5rem;
+        box-shadow: 1px 2px;
+    }
+
+    .card-title {
+        font-size: 60px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+@media (min-width: 992px){
+
+    .buttons button {
+        font-size: 30px;
+        padding: .5rem;
+        box-shadow: 1px 2px;
+    }
+
+    button {
+        background-color: #204051;
+    }
+
+    .card-title {
+        font-size: 70px;
+    }
+
+
+    .identify  {
+        display: flex;
+        align-items: stretch;
+        background-color: #84a9ac;
+    }
+
+    header>.buttons {
+        display:none;
+    }
+
+}
