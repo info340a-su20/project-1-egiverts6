@@ -50,11 +50,7 @@ button:hover {
     display: flex;
   }
   
-<<<<<<< HEAD
-  .buttons button{
-=======
   .headerButtons button{
->>>>>>> master
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     display: flex;
     flex-grow: 1;
@@ -67,18 +63,11 @@ button:hover {
     box-shadow: .5px 1px;
     margin-right: .5em;
     margin-left: .5em;
-<<<<<<< HEAD
-    margin-top: .5em;
-
-  }
-  
-=======
     margin-bottom: 2em;
 
   }
   
   
->>>>>>> master
   .column1 {
     flex-basis: 250px;
     padding: 1em;
@@ -236,9 +225,6 @@ hr {
     margin-bottom: 3rem;
 }
 
-<<<<<<< HEAD
-
-=======
 .container h5 {
   font-size: 18px;
 }
@@ -307,7 +293,6 @@ hr {
 #stateInputt {
   margin-top: 1rem;
 }
->>>>>>> master
 
 
 @media (min-width: 768px){
@@ -334,11 +319,8 @@ hr {
         height: 200px;
     }
 
-<<<<<<< HEAD
-=======
     
 
->>>>>>> master
 }
 
 @media (min-width: 992px){
