@@ -35,5 +35,8 @@
         "error"
       ]
     }
+  },
+  "dependencies": {
+    "d3-fetch": "^1.2.0"
   }
 }

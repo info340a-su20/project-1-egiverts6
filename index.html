@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <link rel="stylesheet" href="css/staticstyle.css">
 </head>
 <body>
@@ -28,94 +29,159 @@
                 <img class="logo" src="img/logo.png" alt="Brain">
                 <h1 class="card-title">COVID Mentality</h1>
             </div>
+        </header>
 
-            <div class="buttons">
+
+        <div class="headerButtons">
 
 
               
-                <!-- Pop up modal of form when button is clicked (NEEDS JAVASCRIPT) -->
-                <button type="button" class="btn" data-toggle="modal" data-target="#IdentifyModal">
-                    Identify
-                </button>
+            <!-- Pop up modal of form when button is clicked (NEEDS JAVASCRIPT) -->
+            <button type="button" class="btn show" data-toggle="modal" data-target="#IdentifyModal">
+                Identify
+            </button>
 
-                <div class="modal fade" id="IdentifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        </div>
-                        <div class="modal-body">
-                          pls
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                      </div>
+            <div class="modal fade" id="IdentifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="IdenitifyModalLongTitle">Identify Your Mental State</h4>
                     </div>
-                </div>
-
-                <!-- Pop up modal when button is clicked (NEEDS JAVASCRIPT) -->
-                <button type="button" class="btn" data-toggle="modal" data-target="#ResourcesModal">
-                    Immediate Resources
-                </button>
-                
-                <div class="modal fade" id="ResourcesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <div class="modal-body">
+                        <div id="accordion">
+                            <div class="card">
+                    
+                        
+                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-6">
+                                                <label for="exampleInputEmail1">First Name</label>
+                                                <input type="text" class="form-control" placeholder="First">
+                                            </div>
+                                            <div class="col">
+                                                <label for="exampleInputEmail1">Last Name</label>
+                                                <input type="text" class="form-control" placeholder="Last">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="exampleInputEmail1">Email Address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        </div>
+                                        <fieldset class="form-group">
+                                            <div class="row">
+                                                <legend class="col-legend">During the past month, have you felt down, depressed, or hopeless?</legend>
+                                                <div class="col">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="gridRadios1">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                        <label class="form-check-label" for="gridRadios2">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2">
+                                                        <label class="form-check-label" for="gridRadios2">
+                                                            Maybe
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        
+                                        <div class="col-auto my-1">
+                                            <label class="mr-sm-2" for="inlineFormCustomSelect">Current Mood</label>
+                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect1">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Great</option>
+                                            <option value="2">Good</option>
+                                            <option value="3">Fine</option>
+                                            <option value="4">Bad</option>
+                                            <option value="5">Horrible</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <button type="button" class="btn" id="identifySubButton1">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <h5>Immediate Resources</h5>
-                            <h8>Useful Hotlines:</h8>
-                            <ul>
-                                <li>Suicide Prevention: 1(800)-273-8255</li>
-                                <li>Sexual Assault: 1(800)-656-4673</li>
-                                <li>Crisis Text Line: Text HOME to 741741</li>
-                                <li>Eating Disorder: 1(800)-931-2237</li>
-                                <li>Panic Disorder: 1(800)-647-2642</li>
-                            </ul>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
                     </div>
-                </div>
-
-                <!-- Pop up modal of form when button is clicked (NEEDS JAVASCRIPT) -->
-                <button type="button" class="btn" data-toggle="modal" data-target="#FeedbackModal">
-                    Feedback Form
-                </button>
-                
-                <div class="modal fade" id="FeedbackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        </div>
-                        <div class="modal-body">
-                            <p>Submit feedback about our site with ways you believe we can improve. Feel free to suggest useful sites or notify us about information that should be changed or updated!</p>
-                            <h5>Anonymous Feedback Form</h4>
-                                <p>Submit feedback, suggestions, useful resources, and/or information that you believe should be changed or updated!</p>
-                                <form>
-                                    <div class="form-group">
-                                        <label for="inputFeedback">Feedback:</label>
-                                        <input type="text" class="form-control" id="inputFeedback">
-                                      </div>
-                                </form>
-                        </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary">Submit</button>
-                        </div>
-                      </div>
                     </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
                 </div>
-
             </div>
-        </header>
+
+            <!-- Pop up modal when button is clicked (NEEDS JAVASCRIPT) -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#ResourcesModal">
+                Immediate Resources
+            </button>
+            
+            <div class="modal fade" id="ResourcesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLongTitle">Immediate Resources</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Useful Hotlines:</h4>
+                        <ul>
+                            <li>Suicide Prevention: <a href="tel:800-273-8255">1(800)-273-8255</a></li>
+                            <li>Sexual Assault: <a href="tel:800-273-8255">1(800)-656-4673</a></li>
+                            <li>Crisis Text Line: <a href="tel:800-273-8255">Text HOME to 741741</a></li>
+                            <li>Eating Disorder: <a href="tel:800-931-2237">1(800)-931-2237</a></li>
+                            <li>Panic Disorder: <a href="tel:800-647-2642">1(800)-647-2642</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Pop up modal of form when button is clicked (NEEDS JAVASCRIPT) -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#FeedbackModal">
+                Feedback Form
+            </button>
+            
+            <div class="modal fade" id="FeedbackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLongTitle">Anonymous Feedback Form</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="feedback card card-body">
+                            <!-- Form (NEEDS JAVASCRIPT)-->
+                            <p id="feedbackInfo">Submit feedback, suggestions, useful resources, and/or information that you believe should be changed or updated!</p>
+                            <form>
+                                <div class="form-group">
+                                    <label id="inputFeed" for="inputFeedback">Submit Feedback:</label>
+                                    <input type="text" class="form-control" id="inputFeedback1" placeholder="Feedback">
+                                  </div>
+                                <button type='button' id="feedSubID"class="btn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>]
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
 
             <div class="container">
                 <!-- Column 1: Informational Only -->
@@ -124,6 +190,16 @@
                     <p>
                         Mental health is an incredibly important topic that has become more accepted and talked about in recent years. However, it still remains a traditionally “taboo” topic in our modern society. In light of the COVID-19 outbreak, billions of people were forced to quarantine themselves for months. The effects of the virus fears as well as long term isolation greatly affected mental health of people all over the world like never before. According to the <a href="https://www.washingtonpost.com/health/2020/05/04/mental-health-coronavirus/">Washington Post</a>, “A federal emergency hotline for people in emotional distress registered a more than 1,000 percent increase in April compared with the same time last year.” 
                     </p>
+                    <div class="card card-body" id="dynamicInfo">
+                        <h5>Percent of U.S. Adults With Mental Illness in 2016</h5>
+                        <h3 id='output'></h3>
+                        <h9 id='searchInfoo'>Search by State:</h9>
+                        <input type="text" class="form-control" id="stateInputt" placeholder="State">
+                        
+                        <button type="button" class="btn" id="dynamicSearchButton">Search</button>
+
+                    </div>
+
                 </section>
 
                 <section class="column2">
@@ -184,7 +260,7 @@
                                 </h5>
                             </div>
                         
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
                                     <form>
                                         <div class="form-row">
@@ -198,8 +274,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                        <label for="exampleInputEmail1">Email Address</label>
-                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                                        <label for="exampleInputEmail">Email Address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Email">
                                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                         </div>
                                         <fieldset class="form-group">
@@ -207,19 +283,19 @@
                                                 <legend class="col-legend">During the past month, have you felt down, depressed, or hopeless?</legend>
                                                 <div class="col">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option1" checked>
                                                         <label class="form-check-label" for="gridRadios1">
                                                             Yes
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option2">
                                                         <label class="form-check-label" for="gridRadios2">
                                                             No
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="option2">
                                                         <label class="form-check-label" for="gridRadios2">
                                                             Maybe
                                                         </label>
@@ -258,32 +334,32 @@
                         <h8>Useful Hotlines:</h8>
 
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-273-8255">
-                            Suicide Prevention
+                            <a href="tel:800-273-8255">Suicide Prevention</a>
                         </button>
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-273-8255">
-                            Sexual Assault
+                            <a href="tel:800-273-8255">Sexual Assault</a>
                         </button>
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="Text HOME to 741741">
-                            Crisis Text Line
+                            <a href="tel:800-273-8255">Crisis Text Line</a>
                         </button>
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-931-2237">
-                            Eating Disorder
+                            <a href="tel:800-931-2237">Eating Disorder</a>
                         </button>
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-647-2642">
-                            Panic Disorder
+                            <a href="tel:800-647-2642">Panic Disorder</a>
                         </button>
                     </div>
 
                     <div class="feedback card card-body">
                         <!-- Form (NEEDS JAVASCRIPT)-->
                         <h5>Anonymous Feedback Form</h4>
-                        <p id="feedbackInfo">Submit feedback, suggestions, useful resources, and/or information that you believe should be changed or updated!</p>
+                        <p id="feedbackInfoPar">Submit feedback, suggestions, useful resources, and/or information that you believe should be changed or updated!</p>
                         <form>
                             <div class="form-group">
-                                <label id="inputFeed" for="inputFeedback">Feedback:</label>
-                                <input type="text" class="form-control" id="inputFeedback">
+                                <label id="inputFeed" for="inputFeedback">Submit Feedback:</label>
+                                <input type="text" class="form-control" id="inputFeedback" placeholder="Feedback">
                               </div>
-                            <button type='button' class="btn" id="feedbackSubmit">Submit</button>
+                            <button type='button' class="btn" id="feedbackSubmitButt">Submit</button>
                         </form>
                     </div>
                 </section>
