@@ -50,7 +50,11 @@ button:hover {
     display: flex;
   }
   
+<<<<<<< HEAD
   .buttons button{
+=======
+  .headerButtons button{
+>>>>>>> master
     font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
     display: flex;
     flex-grow: 1;
@@ -63,10 +67,18 @@ button:hover {
     box-shadow: .5px 1px;
     margin-right: .5em;
     margin-left: .5em;
+<<<<<<< HEAD
     margin-top: .5em;
 
   }
   
+=======
+    margin-bottom: 2em;
+
+  }
+  
+  
+>>>>>>> master
   .column1 {
     flex-basis: 250px;
     padding: 1em;
@@ -224,7 +236,78 @@ hr {
     margin-bottom: 3rem;
 }
 
+<<<<<<< HEAD
 
+=======
+.container h5 {
+  font-size: 18px;
+}
+
+.form-group .col-legend {
+  font-size: 15px;
+  margin-left: 0.5rem;
+}
+
+.form-group .col .form-check-label {
+  margin-left: 3rem;
+}
+
+.col-auto option {
+  font-size: 5px;
+  margin: 3rem;
+}
+
+.modal-body {
+  display: inline-block;
+}
+
+#dynamicSearchButt {
+  margin-top: 1rem;
+  padding-right: .1rem;
+  padding-left: .1rem;
+}
+
+#stateInput {
+  margin-top: 1rem;
+}
+
+.headerButtons {
+  display: flex;
+
+}
+
+#feedSubID {
+  margin-bottom: 1rem;
+}
+
+.identifyCard {
+  display: none;
+}
+
+.column3 .btn a {
+  color: white;
+}
+
+#dynamicInfo {
+  background-color: #585858;
+}
+
+#dynamicInfo h5,h9 {
+  color: white;
+}
+
+#dynamicInfo h3 {
+  color: #ff6666;
+}
+
+#dynamicSearchButton {
+  margin-top: 1rem;
+}
+
+#stateInputt {
+  margin-top: 1rem;
+}
+>>>>>>> master
 
 
 @media (min-width: 768px){
@@ -251,6 +334,11 @@ hr {
         height: 200px;
     }
 
+<<<<<<< HEAD
+=======
+    
+
+>>>>>>> master
 }
 
 @media (min-width: 992px){

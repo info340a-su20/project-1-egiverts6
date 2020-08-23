@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+<<<<<<< HEAD
+=======
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src = "https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+>>>>>>> master
     <link rel="stylesheet" href="css/staticstyle.css">
 </head>
 <body>
@@ -25,6 +32,7 @@
                 <img class="logo" src="img/logo.png" alt="Brain">
                 <h1 class="card-title">COVID Mentality</h1>
             </div>
+<<<<<<< HEAD
 
             <div class="buttons">
 
@@ -120,75 +128,31 @@
 
             </div>
         </header>
+=======
+        </header>
 
-            <div class="container">
-                <!-- Column 1: Informational Only -->
-                <section class="column1">
-                    <h5>Mental Health & COVID-19</h5>
-                    <p>
-                        Mental health is an incredibly important topic that has become more accepted and talked about in recent years. However, it still remains a traditionally “taboo” topic in our modern society. In light of the COVID-19 outbreak, billions of people were forced to quarantine themselves for months. The effects of the virus fears as well as long term isolation greatly affected mental health of people all over the world like never before. According to the <a href="https://www.washingtonpost.com/health/2020/05/04/mental-health-coronavirus/">Washington Post</a>, “A federal emergency hotline for people in emotional distress registered a more than 1,000 percent increase in April compared with the same time last year.” 
-                    </p>
-                </section>
 
-                <section class="column2">
-                    <h3>Learn</h3>
-                    <div class="container2">
+        <div class="headerButtons">
 
-                        <!-- Card 1 -->
-                        <div class="card card-body">
-                            <img src="img/anxietyy.jpg" alt="Anxiety">
-                            <h5>Anxiety Disorder</h5>
-                            <p>A group of mental illnesses that cause constant and overwhelming anxiety and fear. </p>
-                            <button type="button">Learn More</button>
-                        </div>
 
-                        <!-- Card 2 -->
-                        <div class="card card-body">
-                            <img src="img/depressionn.jpg" alt="Depression">
-                            <h5>Depression</h5>
-                            <p>A disorder characterized by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life.</p>
-                            <button type="button">Learn More</button>
-                        </div>
+              
+            <!-- Pop up modal of form when button is clicked (NEEDS JAVASCRIPT) -->
+            <button type="button" class="btn show" data-toggle="modal" data-target="#IdentifyModal">
+                Identify
+            </button>
 
-                        <!-- Card 3 -->
-                        <div class="card card-body">
-                            <img src="img/eating-disorderr.jpg" alt="Eating Disorder">
-                            <h5>Eating Disorder</h5>
-                            <p>A group of mental illnesses related to persistent eating behaviors that negatively impact health, emotions and ability to function in in daily life.</p>
-                            <button type="button">Learn More</button>
-                        </div>
-
-                        <!-- Card 4 -->
-                        <div class="card card-body">
-                            <img src="img/OCDD.jpg" alt="OCD">
-                            <h5>Obsessive-Compulsive Disorder</h5>
-                            <p>An Illness characterized by unreasonable thoughts and fears (obsessions) that lead to compulsive behaviors.</p>
-                            <button type="button">Learn More</button>
-                        </div>
-
-                        <!-- Card 5 -->
-                        <div class="card card-body">
-                            <img src="img/PTSDD.jpg" alt="PTSD">
-                            <h5>Post Traumatic Stress Disorder</h5>
-                            <p>A disorder in which a person has difficulty recovering after experiencing or witnessing a terrifying event.</p>
-                            <button type="button">Learn More</button>
-                        </div>
-
+            <div class="modal fade" id="IdentifyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="IdenitifyModalLongTitle">Identify Your Mental State</h4>
                     </div>
-
-                    <div class="Identify">
-                        <!-- Accordion-style organized form (NEEDS JAVASCRIPT)-->
+                    <div class="modal-body">
                         <div id="accordion">
                             <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Identify Your Mental State
-                                </button>
-                                </h5>
-                            </div>
+                    
                         
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
                                     <form>
                                         <div class="form-row">
@@ -223,7 +187,264 @@
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option2">
+                                                        <label class="form-check-label" for="gridRadios2">
+                                                            Maybe
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        
+                                        <div class="col-auto my-1">
+                                            <label class="mr-sm-2" for="inlineFormCustomSelect">Current Mood</label>
+                                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect1">
+                                            <option selected>Choose...</option>
+                                            <option value="1">Great</option>
+                                            <option value="2">Good</option>
+                                            <option value="3">Fine</option>
+                                            <option value="4">Bad</option>
+                                            <option value="5">Horrible</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <button type="button" class="btn" id="identifySubButton1">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Pop up modal when button is clicked (NEEDS JAVASCRIPT) -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#ResourcesModal">
+                Immediate Resources
+            </button>
+            
+            <div class="modal fade" id="ResourcesModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLongTitle">Immediate Resources</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h4>Useful Hotlines:</h4>
+                        <ul>
+                            <li>Suicide Prevention: <a href="tel:800-273-8255">1(800)-273-8255</a></li>
+                            <li>Sexual Assault: <a href="tel:800-273-8255">1(800)-656-4673</a></li>
+                            <li>Crisis Text Line: <a href="tel:800-273-8255">Text HOME to 741741</a></li>
+                            <li>Eating Disorder: <a href="tel:800-931-2237">1(800)-931-2237</a></li>
+                            <li>Panic Disorder: <a href="tel:800-647-2642">1(800)-647-2642</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Pop up modal of form when button is clicked (NEEDS JAVASCRIPT) -->
+            <button type="button" class="btn" data-toggle="modal" data-target="#FeedbackModal">
+                Feedback Form
+            </button>
+            
+            <div class="modal fade" id="FeedbackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLongTitle">Anonymous Feedback Form</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="feedback card card-body">
+                            <!-- Form (NEEDS JAVASCRIPT)-->
+                            <p id="feedbackInfo">Submit feedback, suggestions, useful resources, and/or information that you believe should be changed or updated!</p>
+                            <form>
+                                <div class="form-group">
+                                    <label id="inputFeed" for="inputFeedback">Submit Feedback:</label>
+                                    <input type="text" class="form-control" id="inputFeedback1" placeholder="Feedback">
+                                  </div>
+                                <button type='button' id="feedSubID"class="btn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>]
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+>>>>>>> master
+
+            <div class="container">
+                <!-- Column 1: Informational Only -->
+                <section class="column1">
+                    <h5>Mental Health & COVID-19</h5>
+                    <p>
+                        Mental health is an incredibly important topic that has become more accepted and talked about in recent years. However, it still remains a traditionally “taboo” topic in our modern society. In light of the COVID-19 outbreak, billions of people were forced to quarantine themselves for months. The effects of the virus fears as well as long term isolation greatly affected mental health of people all over the world like never before. According to the <a href="https://www.washingtonpost.com/health/2020/05/04/mental-health-coronavirus/">Washington Post</a>, “A federal emergency hotline for people in emotional distress registered a more than 1,000 percent increase in April compared with the same time last year.” 
+                    </p>
+<<<<<<< HEAD
+=======
+                    <div class="card card-body" id="dynamicInfo">
+                        <h5>Percent of U.S. Adults With Mental Illness in 2016</h5>
+                        <h3 id='output'></h3>
+                        <h9 id='searchInfoo'>Search by State:</h9>
+                        <input type="text" class="form-control" id="stateInputt" placeholder="State">
+                        
+                        <button type="button" class="btn" id="dynamicSearchButton">Search</button>
+
+                    </div>
+
+>>>>>>> master
+                </section>
+
+                <section class="column2">
+                    <h3>Learn</h3>
+                    <div class="container2">
+
+                        <!-- Card 1 -->
+                        <div class="card card-body">
+                            <img src="img/anxietyy.jpg" alt="Anxiety">
+                            <h5>Anxiety Disorder</h5>
+                            <p>A group of mental illnesses that cause constant and overwhelming anxiety and fear. </p>
+<<<<<<< HEAD
+                            <button type="button">Learn More</button>
+=======
+                            <button type="button" id="anxiety">Learn More</button>
+>>>>>>> master
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="card card-body">
+                            <img src="img/depressionn.jpg" alt="Depression">
+                            <h5>Depression</h5>
+                            <p>A disorder characterized by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life.</p>
+<<<<<<< HEAD
+                            <button type="button">Learn More</button>
+=======
+                            <button type="button" id="depression">Learn More</button>
+>>>>>>> master
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="card card-body">
+                            <img src="img/eating-disorderr.jpg" alt="Eating Disorder">
+                            <h5>Eating Disorder</h5>
+                            <p>A group of mental illnesses related to persistent eating behaviors that negatively impact health, emotions and ability to function in in daily life.</p>
+<<<<<<< HEAD
+                            <button type="button">Learn More</button>
+=======
+                            <button type="button" id="eating">Learn More</button>
+>>>>>>> master
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="card card-body">
+                            <img src="img/OCDD.jpg" alt="OCD">
+                            <h5>Obsessive-Compulsive Disorder</h5>
+                            <p>An Illness characterized by unreasonable thoughts and fears (obsessions) that lead to compulsive behaviors.</p>
+<<<<<<< HEAD
+                            <button type="button">Learn More</button>
+=======
+                            <button type="button"  id="ocd">Learn More</button>
+>>>>>>> master
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="card card-body">
+                            <img src="img/PTSDD.jpg" alt="PTSD">
+                            <h5>Post Traumatic Stress Disorder</h5>
+                            <p>A disorder in which a person has difficulty recovering after experiencing or witnessing a terrifying event.</p>
+<<<<<<< HEAD
+                            <button type="button">Learn More</button>
+=======
+                            <button type="button" id="ptsd">Learn More</button>
+>>>>>>> master
+                        </div>
+
+                    </div>
+
+                    <div class="Identify">
+                        <!-- Accordion-style organized form (NEEDS JAVASCRIPT)-->
+                        <div id="accordion">
+                            <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+<<<<<<< HEAD
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+=======
+                                <button class="btn btn-link" id="identifyButt" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+>>>>>>> master
+                                    Identify Your Mental State
+                                </button>
+                                </h5>
+                            </div>
+                        
+<<<<<<< HEAD
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+=======
+                            <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+>>>>>>> master
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-6">
+                                                <label for="exampleInputEmail1">First Name</label>
+                                                <input type="text" class="form-control" placeholder="First">
+                                            </div>
+                                            <div class="col">
+                                                <label for="exampleInputEmail1">Last Name</label>
+                                                <input type="text" class="form-control" placeholder="Last">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+<<<<<<< HEAD
+                                        <label for="exampleInputEmail1">Email Address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+=======
+                                        <label for="exampleInputEmail">Email Address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="Email">
+>>>>>>> master
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                                        </div>
+                                        <fieldset class="form-group">
+                                            <div class="row">
+                                                <legend class="col-legend">During the past month, have you felt down, depressed, or hopeless?</legend>
+                                                <div class="col">
+                                                    <div class="form-check">
+<<<<<<< HEAD
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+=======
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option1" checked>
+>>>>>>> master
+                                                        <label class="form-check-label" for="gridRadios1">
+                                                            Yes
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+<<<<<<< HEAD
                                                         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+=======
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option2">
+>>>>>>> master
+                                                        <label class="form-check-label" for="gridRadios2">
+                                                            No
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+<<<<<<< HEAD
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+=======
+                                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios6" value="option2">
+>>>>>>> master
                                                         <label class="form-check-label" for="gridRadios2">
                                                             Maybe
                                                         </label>
@@ -244,7 +465,11 @@
                                             </select>
                                         </div>
                                         
+<<<<<<< HEAD
                                         <button type="submit" class="btn">Submit</button>
+=======
+                                        <button type="button" class="btn" id="identifySubButton">Submit</button>
+>>>>>>> master
                                     </form>
                                 </div>
                             </div>
@@ -262,6 +487,7 @@
                         <h8>Useful Hotlines:</h8>
 
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-273-8255">
+<<<<<<< HEAD
                             Suicide Prevention
                         </button>
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-273-8255">
@@ -275,12 +501,28 @@
                         </button>
                         <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-647-2642">
                             Panic Disorder
+=======
+                            <a href="tel:800-273-8255">Suicide Prevention</a>
+                        </button>
+                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-273-8255">
+                            <a href="tel:800-273-8255">Sexual Assault</a>
+                        </button>
+                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="Text HOME to 741741">
+                            <a href="tel:800-273-8255">Crisis Text Line</a>
+                        </button>
+                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-931-2237">
+                            <a href="tel:800-931-2237">Eating Disorder</a>
+                        </button>
+                        <button type="button" class="btn" data-container="body" data-toggle="popover" data-placement="top" data-content="1(800)-647-2642">
+                            <a href="tel:800-647-2642">Panic Disorder</a>
+>>>>>>> master
                         </button>
                     </div>
 
                     <div class="feedback card card-body">
                         <!-- Form (NEEDS JAVASCRIPT)-->
                         <h5>Anonymous Feedback Form</h4>
+<<<<<<< HEAD
                         <p>Submit feedback, suggestions, useful resources, and/or information that you believe should be changed or updated!</p>
                         <form>
                             <div class="form-group">
@@ -288,6 +530,15 @@
                                 <input type="text" class="form-control" id="inputFeedback">
                               </div>
                             <button type="submit" class="btn">Submit</button>
+=======
+                        <p id="feedbackInfoPar">Submit feedback, suggestions, useful resources, and/or information that you believe should be changed or updated!</p>
+                        <form>
+                            <div class="form-group">
+                                <label id="inputFeed" for="inputFeedback">Submit Feedback:</label>
+                                <input type="text" class="form-control" id="inputFeedback" placeholder="Feedback">
+                              </div>
+                            <button type='button' class="btn" id="feedbackSubmitButt">Submit</button>
+>>>>>>> master
                         </form>
                     </div>
                 </section>
@@ -318,7 +569,10 @@
           <hr>
         </div>
 
+<<<<<<< HEAD
         <hr style="border: .02px solid" />
+=======
+>>>>>>> master
 
         <div class="container2">
           <div class="row">
@@ -330,5 +584,11 @@
         </div>
   </footer>
 
+<<<<<<< HEAD
+=======
+  <!-- javascript-->
+  <script src="js/index.js"></script>
+
+>>>>>>> master
 </body>
 </html>
